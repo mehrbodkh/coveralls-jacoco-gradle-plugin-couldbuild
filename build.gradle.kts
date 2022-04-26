@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-group = "com.github.nbaztec"
-version = "1.2.14"
+group = "com.github.mehrbodkh"
+version = "1.2.16"
 
 buildscript {
     repositories {
@@ -112,7 +112,7 @@ plugins {
     `maven-publish`
     id("org.jetbrains.kotlin.jvm") version Versions.kotlin
     id("com.gradle.plugin-publish") version Versions.gradlePublishPlugin
-    id("com.github.nbaztec.coveralls-jacoco") version Versions.gradleCoverallsJacocoPlugin
+    id("com.github.mehrbodkh.coveralls-jacoco") version Versions.gradleCoverallsJacocoPlugin
 }
 
 publishing {
@@ -127,7 +127,7 @@ publishing {
 gradlePlugin {
     plugins {
         create("coverallsJacocoPlugin") {
-            id = "com.github.nbaztec.coveralls-jacoco"
+            id = "com.github.mehrbodkh.coveralls-jacoco"
             implementationClass = "org.gradle.plugin.coveralls.jacoco.CoverallsJacocoPlugin"
         }
     }
@@ -136,8 +136,8 @@ gradlePlugin {
 pluginBundle {
     (plugins) {
         "coverallsJacocoPlugin" {
-            website = "http://github.com/nbaztec/coveralls-jacoco-gradle-plugin/"
-            vcsUrl = "https://github.com/nbaztec/coveralls-jacoco-gradle-plugin.git"
+            website = "http://github.com/mehrbodkh/coveralls-jacoco-gradle-plugin-cloudbuild/"
+            vcsUrl = "https://github.com/mehrbodkh/coveralls-jacoco-gradle-plugin-couldbuild.git"
             description = "Send jacoco coverage data to coveralls.io"
             tags = listOf("coverage", "coveralls")
             displayName = "Coveralls Jacoco Plugin"
