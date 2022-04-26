@@ -97,6 +97,7 @@ class ServiceInfoParser(val envGetter: EnvGetter) {
             else -> ServiceInfo(
                     name = envGetter("CI_NAME") ?: "other",
                     number = envGetter("CI_BUILD_NUMBER"),
+                    jobId = envGetter("CI_BUILD_NUMBER"),
                     pr = envGetter("CI_PULL_REQUEST"),
                     branch = envGetter("CI_BRANCH"),
                     buildUrl = envGetter("CI_BUILD_URL")
